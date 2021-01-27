@@ -1,0 +1,76 @@
+@import "../../../styles/artifacts/index.scss";
+
+.inquire {
+	@include inner__1200;
+
+	&__form {
+		@include inner__800;
+		margin: 7.5rem auto 0;
+	}
+	label {
+		margin: 0 0 10px 0;
+		display: block;
+		color: #fff;
+		font-size: 16px;
+	}
+	[class^="inquire__list"] {
+		display: flex;
+		justify-content: space-between;
+		li {
+			width: 50%;
+			margin-right: 3rem;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+	&__list2,
+	&__content {
+		margin-top: 3rem;
+	}
+	input[type="text"],
+	textarea {
+		width: 100%;
+		background: #ffffff;
+		border: none;
+		border-radius: 3px;
+		font-size: 14px;
+		box-sizing: border-box;
+	}
+	input[type="text"] {
+		height: 45px;
+		padding: 0 20px;
+	}
+	textarea {
+		display: block;
+		height: 300px;
+		padding: 20px;
+	}
+	&__agreement--box {
+		display: flex;
+		margin-top: 35px;
+		align-items: center;
+		label {
+			margin-bottom: 0;
+			margin-left: 1rem;
+		}
+	}
+	&__btn {
+		@include skyblue__btn;
+		width: 400px;
+		font-size: 2.4rem;
+		padding: 2rem 0;
+		margin: 5rem auto 0;
+	}
+}
+@include respond(phone) {
+	.inquire {
+		[class^="inquire__list"] {
+			display: block;
+			li {
+				width: 100%;
+				margin-top: 2rem;
+			}
+		}
+	}
+}

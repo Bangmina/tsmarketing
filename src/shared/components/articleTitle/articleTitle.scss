@@ -1,0 +1,23 @@
+.subject {
+	text-align: center;
+
+	&.white {
+		.subject__title {
+			color: #fff;
+		}
+		.subject__subtitle {
+			color: #fff;
+		}
+	}
+	&__title {
+		font-size: 4.4rem;
+		font-weight: 700;
+	}
+	&__subtitle {
+		white-space: pre-wrap;
+		margin-top: 2rem;
+		font-size: 2.2rem;
+		color: #747474;
+		line-height: 1.5;
+	}
+}

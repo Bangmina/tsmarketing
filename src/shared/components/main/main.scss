@@ -1,0 +1,8 @@
+@import "../../../styles/artifacts/index.scss";
+
+.main {
+	min-height: calc(100vh - 320px);
+	@include respond(tab) {
+		min-height: calc(100vh - 300px);
+	}
+}

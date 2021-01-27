@@ -1,0 +1,99 @@
+@import "../../../styles/artifacts/index.scss";
+.header {
+	position: fixed;
+	top: 0;
+	z-index: 100;
+	width: 100%;
+	background: $tsmarketing-sub-white;
+	box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.1);
+	&__box {
+		@include inner__1200;
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 8rem;
+	}
+	&__logo1--img {
+		width: 11.5rem;
+	}
+	&__logo2 {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		-moz-transform: translate(-50%, -50%);
+		-o-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+	}
+	&__logo2--img {
+		width: 5.5rem;
+	}
+	&__menu--btn {
+		display: none;
+	}
+	&__nav--depth1 {
+		display: flex;
+	}
+	&__nav--depth1 {
+		> li {
+			position: relative;
+			margin-right: 4rem;
+			&:last-child {
+				margin-right: 0;
+			}
+			a {
+				font-size: 1.6rem;
+				font-weight: 500;
+				transition: all 0.3s;
+				&:hover {
+					color: $tsmarketing-sub-skyblue;
+				}
+			}
+		}
+	}
+	&__nav--depth2 {
+		display: none;
+		position: absolute;
+		left: 50%;
+		top: 3rem;
+		transform: translateX(-50%);
+		-webkit-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		-o-transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
+		width: 20rem;
+		border: 1px solid #ddd;
+		border-radius: 5px;
+		background: $tsmarketing-sub-white;
+		overflow: hidden;
+		> li a {
+			display: block;
+			padding: 1rem;
+			text-align: center;
+			font-weight: 400;
+			transition: all 0.3s;
+			border-bottom: 1px solid #ddd;
+			&:hover {
+				background: $grayscale-1;
+			}
+			&:first-child {
+				padding-top: 2rem;
+			}
+			&:last-child {
+				padding-bottom: 2rem;
+			}
+		}
+	}
+}
+
+// 991px
+@include respond(tab) {
+	.header {
+		display: none;
+		&__nav--depth1 {
+			display: none;
+		}
+	}
+}
